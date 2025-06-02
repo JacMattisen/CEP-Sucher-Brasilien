@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import "./styles.css";
+import "./styles/styles.css";
 import { FaMapMarkerAlt, FaRoad, FaHome, FaMapMarkedAlt } from 'react-icons/fa'; //ícones do react-icons, esta no H2.
 
 
@@ -10,7 +10,7 @@ function App() {
 
   const [input, setInput] = useState('');
   const [cep, setCep] = useState({});
- 
+
 
 
   async function handleSearch() {
@@ -33,9 +33,11 @@ function App() {
   return (
     <div className="container">
       <h1 className="title"> Buscador CEP</h1>
-      
+      <label htmlFor="cepInput" className="visually-hidden">Digite o CEP</label>
       <div className="containerInput">
+
         <input
+          id="cepInput"
           type="text"
           className="input"
           placeholder="Digite o CEP"
@@ -43,7 +45,10 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
         />
 
-        <button className="buttonSearch" onClick={handleSearch}>
+        <button 
+        className="buttonSearch" 
+        onClick={handleSearch} 
+        arial-label="Buscar CEP">
           <FiSearch size={25} color="#FFF"/>
         </button>
       </div>

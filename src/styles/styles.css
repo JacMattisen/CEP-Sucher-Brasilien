@@ -69,6 +69,18 @@
     color: #888;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
 .main {
     display: flex;
     flex-direction: column;
@@ -111,14 +123,22 @@
 }
 
 .main span {
-    margin-botton: 10px;
+    margin-bottom: 10px;
     font-weight: 600;
     padding: 5px;
-    margin-bottom: 10px;  /* espaçamento entre as linhas */
+    margin-bottom: 10px;  
     font-size: 18px;
     color: #333;
     align-self: center;  
 }
+
+input:focus, /*acessibilidade para quando apertar o botao TAB */
+button:focus {
+    outline: 4px solid #007bff;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 
 @media (max-width: 600px) {
     .title {
@@ -133,4 +153,14 @@
         width: 90%;
         min-height: 300px;
     }
+
+    .containerInput {
+    flex-direction: column;
+}
+
+    .buttonSearch {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+}
 }

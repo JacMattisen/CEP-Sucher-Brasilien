@@ -46,14 +46,23 @@ Basierend auf der Lektion von Sujeito Programador (Matheus Fraga)
 
 Das Layout verwendet einen sanften Farbverlauf als Hintergrund und einen Container mit Schatten, um das Suchfeld hervorzuheben. Moderne Icons verbessern die Benutzerfreundlichkeit.
 
+## ♿ Acessibility Improvements
+Drei Verbesserungen wurden vorgenommen, um die Zugänglichkeit des Codes zu erhöhen:
+
+Eingabefeld für Postleitzahl mit verstecktem Label:
+Ein <label> mit der Klasse .visually-hidden wurde dem Eingabefeld hinzugefügt, damit Screenreader den Zweck des Feldes korrekt vorlesen, auch wenn das Label visuell nicht angezeigt wird.
+
+Button mit aria-label:
+Der Suchbutton, der nur ein Icon zeigte, erhielt ein aria-label="Buscar CEP". Dadurch können Screenreader-Nutzer die Funktion des Buttons verstehen.
+
+Sichtbare Fokus-Markierung bei Tab-Navigation:
+Es wurde ein :focus-Stil im CSS definiert, damit Eingabefelder und Buttons beim Navigieren mit der Tab-Taste einen sichtbaren Umriss anzeigen. Das erleichtert die Nutzung ohne Maus.
+
 ---
 
 ## 🚧 Geplante Verbesserungen
 
-- **Hintergrundbild mit gezeichnetem Kartenmotiv hinzufügen**, um die Oberfläche ansprechender und thematisch passender zu gestalten.  
 - **Unterstützung für mehrere Länder** (z.B. Deutschland) mit Länderauswahl für internationale Suchen.  
-- **Barrierefreiheit verbessern**, damit die App für alle Nutzer zugänglich ist.  
-- **Sanfte Animationen und Übergänge hinzufügen** für ein professionelleres Aussehen.  
 
 ---
 ---
@@ -105,11 +114,20 @@ Feedback visual e alertas em caso de erro ou campo vazio
 ## 🎨 Design
 O layout usa um fundo degradê suave e um container com sombra para destacar o campo de busca. Ícones modernos para melhorar a usabilidade.
 
+## ♿ Melhorias de Acessibilidade
+Foram implementadas três melhorias no código para torná-lo mais acessível:
+
+Campo de CEP com rótulo oculto:
+Foi adicionado um <label> com a classe .visually-hidden ao campo de entrada de CEP. Isso permite que leitores de tela anunciem corretamente o propósito do campo, mesmo que o rótulo não esteja visível na tela.
+
+Botão com aria-label:
+O botão de busca, que exibia apenas um ícone, recebeu um atributo aria-label="Buscar CEP". Isso garante que usuários com leitores de tela entendam a função do botão.
+
+Destaque visual ao navegar com Tab:
+Foi adicionado um estilo :focus no CSS para que campos e botões exibam um contorno visível ao receberem foco via teclado (Tab). Isso melhora a navegação para pessoas que não usam mouse.
+
 ## 🚧 Melhorias planejadas
 
-- **Adicionar imagem de fundo com tema mapa desenhado** para deixar a interface mais atrativa e temática.
 - **Suporte a múltiplos países** (exemplo: Alemanha) com seleção de país para buscas internacionais.
-- **Melhorar acessibilidade** para tornar o app usável para todos os públicos.
-- **Adicionar animações e transições suaves** para um visual mais profissional.
 
 ---
