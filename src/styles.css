@@ -8,6 +8,7 @@
     background: linear-gradient(to bottom, #ffffff, #f1f4f6);
 }
 
+
 .title {
     font-size: 85px;
     color: #333;
@@ -22,6 +23,34 @@
         transform: rotateY(0deg);
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.container {
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main {
+    animation: slideUp 0.8s ease-in-out;
+}
+
 
 .containerInput {
     background-color: #ffffff;
@@ -69,8 +98,9 @@
 
 .buttonSearch:hover {
     transform: scale(1.2);
-}
+    transition: transform 0.3s ease;
 
+}
 
 
 .main h2 {
